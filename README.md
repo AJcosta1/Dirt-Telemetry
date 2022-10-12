@@ -15,7 +15,7 @@ It is also possible, that the entry is already in use (enabled="true"), or that 
 3-Update the textfile
 We now change the entry to:
 
-<udp enabled="true" extradata="3" ip="127.0.0.1" port="20777" delay="1" />
+<udp enabled="true" extradata="3" ip="127.0.0.1" port="20777" delay="1" extradata="0" / >
 
 (The port, here 20777 must be consistend with the port in the SIM Dashboard Server application).
 
