@@ -1,0 +1,66 @@
+	https://www.scribd.com/document/350826037/UDP-output-setup					<?xml version="1.0" encoding="UTF-8"?>		
+Offset	F1 2016 Data (http://forums.codemasters.com/discussion/46726/d-box-and-udp-telemetry-information)		DiRT Rally (https://steamcommunity.com/app/310560/discussions/0/481115363869500839/)			<custom_udp>		
+0	float m_time;	0	Total Time (not reset after stage restart)	0		<float channel="total_time" scale="1.0" />		
+4	float m_lapTime;	1	Current Lap/Stage Time (starts on Go!)	4		<float channel="lap_time" scale="1.0" />		
+8	float m_lapDistance;	2	 Current Lap/Stage Distance (meters)	8		<float channel="lap_distance" scale="1.0" />		
+12	float m_totalDistance;	3	? (starts from 0) - if distance then not equal to above!	12		<float channel="total_distance" scale="1.0" />		
+16	float m_x; // World space position	4	Position X	16		<float channel="position_x" scale="1.0" />		
+20	float m_y; // World space position	5	Position Y	20		<float channel="position_y" scale="1.0" />		
+24	float m_z; // World space position	6	Position Z	24		<float channel="position_z" scale="1.0" />		
+28	float m_speed;	7	Velocity (Speed) [m/s]	28		<float channel="speed" scale="1.0" />		
+32	float m_xv; // Velocity in world space	8	Velocity X	32		<float channel="velocity_x" scale="1.0" />		
+36	float m_yv; // Velocity in world space	9	Velocity Y	36		<float channel="velocity_y" scale="1.0" />		
+40	float m_zv; // Velocity in world space	10	Velocity Z	40		<float channel="velocity_z" scale="1.0" />		
+44	float m_xr; // World space right direction	11	Roll Vector X	44		<float channel="left_dir_x" scale="-1.0" />		
+48	float m_yr; // World space right direction	12	Roll Vector Y	48		<float channel="left_dir_y" scale="-1.0" />		
+52	float m_zr; // World space right direction	13	Roll Vector Z	52		<float channel="left_dir_z" scale="-1.0" />		
+56	float m_xd; // World space forward direction	14	Pitch Vector X	56		<float channel="forward_dir_x" scale="1.0" />		
+60	float m_yd; // World space forward direction	15	Pitch Vector Y	60		<float channel="forward_dir_y" scale="1.0" />		
+64	float m_zd; // World space forward direction	16	Pitch Vector Z	64		<float channel="forward_dir_z" scale="1.0" />		
+68	float m_susp_pos_bl;	17	Position of Suspension Rear Left	68		<float channel="suspension_position_bl" scale="1000.0" />		
+72	float m_susp_pos_br;	18	Position of Suspension Rear Right	72		<float channel="suspension_position_br" scale="1000.0" />		
+76	float m_susp_pos_fl;	19	Position of Suspension Front Left	76		<float channel="suspension_position_fl" scale="1000.0" />		
+80	float m_susp_pos_fr;	20	Position of Suspension Front Right	80		<float channel="suspension_position_fr" scale="1000.0" />		
+84	float m_susp_vel_bl;	21	Velocity of Suspension Rear Left	84		<float channel="suspension_velocity_bl" scale="1000.0" />		
+88	float m_susp_vel_br;	22	Velocity of Suspension Rear Right	88		<float channel="suspension_velocity_br" scale="1000.0" />		
+92	float m_susp_vel_fl;	23	Velocity of Suspension Front Left	92		<float channel="suspension_velocity_fl" scale="1000.0" />		
+96	float m_susp_vel_fr;	24	Velocity of Suspension Front Right	96		<float channel="suspension_velocity_fr" scale="1000.0" />		
+100	float m_wheel_speed_bl;	25	Velocity of Wheel Rear Left	100		<float channel="wheel_patch_speed_bl" scale="1.0" />		
+104	float m_wheel_speed_br;	26	Velocity of Wheel Rear Right	104		<float channel="wheel_patch_speed_br" scale="1.0" />		
+108	float m_wheel_speed_fl;	27	Velocity of Wheel Front Left	108		<float channel="wheel_patch_speed_fl" scale="1.0" />		
+112	float m_wheel_speed_fr;	28	Velocity of Wheel Front Right	112		<float channel="wheel_patch_speed_fr" scale="1.0" />		
+116	float m_throttle;	29	Position Throttle	116		<float channel="throttle_input" scale="1.0" />		
+120	float m_steer;	30	Position Steer	120		<float channel="steering_input" scale="1.0" />		
+124	float m_brake;	31	Position Brake	124		<float channel="brake_input" scale="1.0" />		
+128	float m_clutch;	32	Position Clutch	128		<float channel="clutch_input" scale="1.0" />		
+132	float m_gear;	33	Gear [0 = Neutral, 1 = 1, 2 = 2, ..., 10 = Reverse]	132		<float channel="gear" scale="1.0" />		
+136	float m_gforce_lat;	34	G-Force Lateral	136		<float channel="gforce_lateral" scale="1.0" />		
+140	float m_gforce_lon;	35	G-Force Longitudinal	140		<float channel="gforce_longitudinal" scale="1.0" />		
+144	float m_lap;	36	Current Lap (rx only)	144		<float channel="lap" scale="1.0" />		
+148	float m_engineRate;	37	Engine Speed [rpm / 10]	148		<float channel="engine_rate" scale="1.0" />		
+152	float m_sli_pro_native_support; // SLI Pro support	38	? (always 1)	152		<float channel="native_sli_support" scale="1.0" />		
+156	float m_car_position; // car race position	39	Current Position (rx only)	156		<float channel="race_position" scale="1.0" />		
+160	float m_kers_level; // kers energy left	40	? (always 0)	160		<float channel="kers_level" scale="1.0" />		
+164	float m_kers_max_level; // kers maximum energy	41	? (always 0)	164		<float channel="kers_level_max" scale="1.0" />		
+168	float m_drs; // 0 = off, 1 = on	42	? (always 0)	168		<float channel="drs" scale="1.0" />		
+172	float m_traction_control; // 0 (off) - 2 (high)	43	? (always 0)	172		<float channel="traction_control" scale="1.0" />		
+176	float m_anti_lock_brakes; // 0 (off) - 1 (on)	44	? (always 0)	176		<float channel="abs" scale="1.0" />		
+180	float m_fuel_in_tank; // current fuel mass	45	? (always 0)	180		<float channel="fuel_in_tank" scale="1.0" />		
+184	float m_fuel_capacity; // fuel capacity	46	? (always 0)	184		<float channel="fuel_capacity" scale="1.0" />		
+188	float m_in_pits; // 0 = none, 1 = pitting, 2 = in pit area	47	? (always 0)	188		<float channel="in_pits" scale="1.0" />		
+192	float m_sector; // 0 = sector1, 1 = sector2; 2 = sector3	48	? (always 0)	192		<float channel="race_sector" scale="1.0" />		
+196	float m_sector1_time; // time of sector1 (or 0)	49	Sector time - 63 seconds appears after around 1/3 of stage.	196		<float channel="sector_time_1" scale="1.0" />		
+200	float m_sector2_time; // time of sector2 (or 0)	50	2nd Sector time - xxx seconds appears after around 2/3 of stage.	200		<float channel="sector_time_2" scale="1.0" />		
+204	float m_brakes_temp[4]; // brakes temperature (centigrade)	51	Temperature Brake Rear Left in C	204		<float channel="brake_temp_bl" scale="1.0" />		
+208	float m_wheels_pressure[4]; // wheels pressure PSI	52	Temperature Brake Rear Right  in C	208		<float channel="brake_temp_br" scale="1.0" />		
+212	float m_team_info; // team ID	53	Temperature Brake Front Left in C	212		<float channel="brake_temp_fl" scale="1.0" />		
+216	float m_total_laps; // total number of laps in this race	54	Temperature Brake Front Right in C	216		<float channel="brake_temp_fr" scale="1.0" />		
+220	float m_track_size; // track size meters	55	?  (always 0)	220		<float channel="tyre_pressure_bl" scale="1.0" />		
+224	float m_last_lap_time; // last lap time	56	? (always 0)	224		<float channel="tyre_pressure_br" scale="1.0" />		
+228	float m_max_rpm; // cars max RPM, at which point the rev limiter will kick in	57	? (always 0)	228		<float channel="tyre_pressure_fl" scale="1.0" />		
+232	float m_idle_rpm; // cars idle RPM	58	? (always 0)	232		<float channel="tyre_pressure_fr" scale="1.0" />		
+236	float m_max_gears; // maximum number of gears	59	Current Lap (rx only)	236		<float channel="laps_completed" scale="1.0" />		
+240	float m_sessionType; // 0 = unknown, 1 = practice, 2 = qualifying, 3 = race	60	Total Number of Laps (rx only, rally = 1)	240		<float channel="total_laps" scale="1.0" />		
+244	float m_drsAllowed; // 0 = not allowed, 1 = allowed, -1 = invalid / unknown	61	Total Track Length	244		<float channel="track_length" scale="1.0" />		
+248	float m_track_number; // -1 for unknown, 0-21 for tracks	62	Last lap time / stage time	248		<float channel="last_lap_time" scale="1.0" />		
+252	float m_vehicleFIAFlags; // -1 = invalid/unknown, 0 = none, 1 = green, 2 = blue, 3 = yellow, 4 = red	63	Maximum rpm / 10	252				
